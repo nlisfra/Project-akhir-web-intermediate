@@ -55,4 +55,5 @@ const updateView = {
   },
 };
 
+
 export default updateView;
