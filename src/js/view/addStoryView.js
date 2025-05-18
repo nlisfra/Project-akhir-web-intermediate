@@ -47,7 +47,6 @@ const addStoryView = {
       btn.addEventListener("click", () => {
         const target = document.querySelector('main');
         if (!target) return;
-        // Pastikan html2canvas sudah tersedia di global scope
         html2canvas(target).then(canvas => {
           const link = document.createElement('a');
           link.download = 'screenshot.png';
@@ -66,7 +65,6 @@ const addStoryView = {
     const canvas = document.getElementById("canvas");
     const preview = document.getElementById("preview");
 
-    // Tombol screenshot khusus kamera
     const screenshotBtn = document.createElement("button");
     screenshotBtn.id = "screenshotBtn";
     screenshotBtn.textContent = "📸 Screenshot Layar";

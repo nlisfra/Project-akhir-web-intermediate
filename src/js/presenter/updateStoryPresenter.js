@@ -27,7 +27,6 @@ const updateStoryPresenter = {
   },
 
   destroy() {
-    // Kosongkan event atau state jika perlu
   }
 };
 

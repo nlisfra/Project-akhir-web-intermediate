@@ -46,7 +46,7 @@ const addStoryPresenter = {
     }
 
     const storyData = {
-      id: Date.now().toString(), // unik untuk IndexedDB
+      id: Date.now().toString(),
       description,
       imageBlob,
       lat,
@@ -86,7 +86,6 @@ const addStoryPresenter = {
 
   const localStories = await getAllLocalStories();
 
-  // ⛔ Stop kalau tidak ada yang disinkronkan
   if (localStories.length === 0) return;
 
   let successCount = 0;

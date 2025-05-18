@@ -44,14 +44,12 @@ const updateView = {
         lat: parseFloat(formData.get("lat")),
         lon: parseFloat(formData.get("lon")),
         photoUrl: formData.get("photoUrl").trim() || null,
-        // kamu bisa tambah field lain jika perlu
       };
 
       onSubmit(updatedData);
     });
 
     container.querySelector("#cancel-btn").addEventListener("click", () => {
-      // Navigasi balik ke daftar cerita
       window.location.hash = "#/stories";
     });
   },

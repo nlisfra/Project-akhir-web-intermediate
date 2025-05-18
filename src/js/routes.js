@@ -10,7 +10,6 @@ const routes = {
   '#/register': registerPresenter,
   '#/stories': storyPresenter,
   '#/add': addStoryPresenter,
-  // route dinamis update story akan ditangani secara manual di router()
 };
 
 let currentPresenter = null;

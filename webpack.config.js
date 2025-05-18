@@ -31,7 +31,7 @@ devServer: {
       target: 'https://story-api.dicoding.dev',
       changeOrigin: true,
       pathRewrite: { '^/api': '' },
-      secure: false, // optional, kalau pakai HTTPS self-signed
+      secure: false,
     },
   },
 },

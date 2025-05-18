@@ -20,10 +20,9 @@ function urlBase64ToUint8Array(base64String) {
   return Uint8Array.from([...rawData].map(c => c.charCodeAt(0)));
 }
 
-// Render daftar cerita ke DOM (kalau perlu, bisa dihapus karena pakai storyView)
 function renderCerita(daftarCerita) {
   const container = document.getElementById('cerita-list');
-  if (!container) return; // safety check
+  if (!container) return;
   container.innerHTML = '';
 
   if (!daftarCerita || daftarCerita.length === 0) {
@@ -74,7 +73,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       applicationServerKey: convertedVapidKey,
     });
 
-    // Ekstrak data subscription sesuai format yang API harapkan
     const subscriptionData = {
       endpoint: subscription.endpoint,
       keys: {

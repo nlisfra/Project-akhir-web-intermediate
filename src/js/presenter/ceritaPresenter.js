@@ -18,7 +18,6 @@ const storyPresenter = {
         const storyList = await getStories(authToken);
         storyView.render(storyList);
       } else {
-        // Ambil dari local DB saat offline
         const localStories = await getAllLocalStories();
         storyView.render(localStories);
       }

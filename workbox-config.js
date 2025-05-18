@@ -12,7 +12,7 @@ module.exports = {
         cacheName: "api-cache",
         expiration: {
           maxEntries: 50,
-          maxAgeSeconds: 24 * 60 * 60, // 1 hari
+          maxAgeSeconds: 24 * 60 * 60, 
         },
       },
     },
@@ -23,7 +23,7 @@ module.exports = {
         cacheName: "map-tiles",
         expiration: {
           maxEntries: 100,
-          maxAgeSeconds: 7 * 24 * 60 * 60, // 1 minggu
+          maxAgeSeconds: 7 * 24 * 60 * 60, 
         },
       },
     },

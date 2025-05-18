@@ -60,7 +60,6 @@ const storyView = {
 
         listContainer.appendChild(storyItem);
 
-        // Inisialisasi peta hanya jika koordinat tersedia
         if (story.lat != null && story.lon != null) {
           setTimeout(() => {
             if (L.DomUtil.get(mapId) !== null) {
@@ -89,7 +88,6 @@ const storyView = {
             });
           }, 100);
         } else {
-          // Jika lokasi tidak tersedia, tampilkan pesan di map-box
           const mapContainer = document.getElementById(mapId);
           if (mapContainer) {
             mapContainer.textContent = "Lokasi tidak tersedia";
@@ -105,7 +103,6 @@ const storyView = {
 
     container.appendChild(listContainer);
 
-    // Event listener dropdown
     listContainer.addEventListener("click", async (e) => {
       const target = e.target;
       const dropdownToggle = target.closest(".dropdown-toggle");
@@ -140,7 +137,6 @@ const storyView = {
       }
     });
 
-    // Tutup dropdown saat klik di luar
     document.addEventListener("click", () => {
       document.querySelectorAll(".dropdown-menu").forEach((menu) => {
         menu.style.display = "none";

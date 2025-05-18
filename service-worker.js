@@ -26,7 +26,6 @@ self.addEventListener('install', event => {
   );
 });
 
-// Activate event: hapus cache lama yang tidak terpakai
 self.addEventListener('activate', event => {
   console.log('[Service Worker] Activating...');
   event.waitUntil(
@@ -43,7 +42,6 @@ self.addEventListener('activate', event => {
   );
 });
 
-// Workbox routing untuk API stories dengan Network First
 workbox.routing.registerRoute(
   ({ url }) => url.origin === 'https://story-api.dicoding.dev',
   new workbox.strategies.NetworkFirst({
@@ -51,7 +49,6 @@ workbox.routing.registerRoute(
   })
 );
 
-// Workbox routing untuk static resources dengan Cache First
 workbox.routing.registerRoute(
   ({ request }) => ['script', 'style', 'image'].includes(request.destination),
   new workbox.strategies.CacheFirst({
@@ -59,7 +56,6 @@ workbox.routing.registerRoute(
   })
 );
 
-// Push notification handler
 self.addEventListener('push', event => {
   const data = event.data?.json() || {};
   console.log('[Service Worker] Push received:', data);
@@ -92,7 +88,6 @@ self.addEventListener('push', event => {
   );
 });
 
-// Notification click event
 self.addEventListener('notificationclick', event => {
   console.log('[Service Worker] Notification click received.');
   event.notification.close();
