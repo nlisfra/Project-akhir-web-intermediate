@@ -2,7 +2,7 @@
   "name": "My Story App Webpack",
   "short_name": "StoryApp",
   "description": "Story App using Webpack",
-  "start_url": "/index.html",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#00aaff",
@@ -16,7 +16,7 @@
       "type": "image/png"
     },
     {
-      "src": "/icons/pwa app icon.png",
+      "src": "/icons/pwa-app-icon.png",
       "sizes": "512x512",
       "type": "image/png"
     }
